@@ -37,7 +37,7 @@ function roll() {
 document.querySelector(".btn-roll").addEventListener("click", roll);
 
 function hold() {
-  // Add Current csore to GLOBAL score
+  // Add Current score to GLOBAL score
   scores[activePlayer] += roundScore;
 
   //Update the UI
@@ -48,8 +48,8 @@ function hold() {
   if (scores[activePlayer] >= 20) {
     document.querySelector("#name-" + activePlayer).textContent = "Winner!";
     document.querySelector(".dice").style.display = "none";
-    document.querySelector('').style.display = "none";
-    document.querySelector(".dice").style.display = "none";
+    document.querySelector(".btn-roll").style.display = "none";
+    document.querySelector(".btn-hold").style.display = "none";
     document
       .querySelector(`.player-${activePlayer}-panel`)
       .classList.add("winner");
@@ -80,6 +80,7 @@ function init() {
   document
     .querySelector(`.player-${activePlayer}-panel`)
     .classList.add("active");
+  document.querySelector(".player-0-panel").classList.remove("winner");
   document.querySelector(".player-1-panel").classList.remove("winner");
   document.querySelector(".dice").style.display = "none";
   document.getElementById("score-0").textContent = "0";
@@ -88,6 +89,8 @@ function init() {
   document.getElementById("current-1").textContent = "0";
   document.getElementById("name-0").textContent = "Player 1";
   document.getElementById("name-1").textContent = "Player 2";
+  document.querySelector(".btn-roll").style.display = "block";
+  document.querySelector(".btn-hold").style.display = "block";
 }
 
 document.querySelector(".btn-new").addEventListener("click", init);
