@@ -14,7 +14,7 @@ init();
 
 function roll() {
   //1. random number
-  let dice = Math.floor(Math.random() * 6) + 1;
+  const dice = Math.floor(Math.random() * 6) + 1;
 
   console.log("dobtunk a kockával ");
   // 2. display the result
@@ -84,9 +84,7 @@ function init() {
   document.getElementById("current-0").textContent = "0";
   document.getElementById("current-1").textContent = "0";
   document.getElementById("name-0").textContent = "Player 1";
-  document.getElementById("name-1").textContent = "Player 2
-
-+";
+  document.getElementById("name-1").textContent = "Player 2";
 }
 
 document.querySelector(".btn-new").addEventListener("click", init);
