@@ -92,12 +92,3 @@ function nextPlayer() {
   document.querySelector(".player-1-panel").classList.toggle("active");
   document.querySelector(".dice").style.display = "none";
 }
-let speed = 10;
-function uj() {
-  let speed = 50;
-  console.log(speed + 100);
-  return speed;
-}
-console.log(speed);
-let b = uj();
-console.log(b);
